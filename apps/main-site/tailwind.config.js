@@ -1,8 +1,9 @@
 module.exports = {
-  presets: [require('@vercel/examples-ui/tailwind')],
+  presets: [require('@alessiomarchi/ui/tailwind.config')],
   content: [
+    './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@vercel/examples-ui/**/*.js',
+    './node_modules/@alessiomarchi/ui/components/*.{js,ts,jsx,tsx}',
   ],
 }

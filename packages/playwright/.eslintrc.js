@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ['custom'],
+  extends: ['./node_modules/@alessiomarchi/configs/eslint-config/index.js'],
 }

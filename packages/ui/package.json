@@ -7,6 +7,7 @@
     },
     "sideEffects": true,
     "peerDependencies": {
+      "@vercel/analytics": "^0.1.8",
       "next": "^13.1.6",
       "react": "^18.2.0",
       "react-dom": "^18.2.0",
@@ -17,6 +18,7 @@
       "sugar-high": "^0.4.6"
     },
     "devDependencies": {
+      "@vercel/analytics": "^0.1.8",
       "@types/react": "^18.0.27",
       "@types/react-dom": "^18.0.10",
       "next": "^13.1.6",

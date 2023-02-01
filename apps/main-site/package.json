@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^7.3.3",
+    "@vercel/analytics": "^0.1.8",
     "clsx": "^1.2.1",
     "next": "^13.1.6",
     "react": "^18.2.0",

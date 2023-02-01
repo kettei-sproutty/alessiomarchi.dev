@@ -1,7 +1,7 @@
 import React, { type FC, type PropsWithChildren } from "react";
 import Link from "next/link";
 import styles from './layout.module.css';
-
+import { AnalyticsWrapper } from '@alessiomarchi/ui/components'
 import "@alessiomarchi/ui/styles/globals.css";
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
@@ -16,6 +16,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
           <Link className={styles.link} href="/design">Design</Link>
         </nav>
         <main className={"w-full max-w-3xl mx-auto py-16"}>{children}</main>
+        <AnalyticsWrapper />
       </body>
     </html>
   );

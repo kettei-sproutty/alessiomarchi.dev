@@ -1,11 +1,11 @@
 import React, { type FC } from "react";
 
-const Page: FC = () => {
+const RootPage: FC = () => {
   return (
-    <div className="">
-        alessiomarchi.dev
+    <div>
+      <h1 className="font-bold">AlessioMarchi.dev</h1>
     </div>
   );
 };
 
-export default Page;
+export default RootPage;

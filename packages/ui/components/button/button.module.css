@@ -1,5 +1,5 @@
 .root {
-    @apply transition-colors ring-offset-2 shadow-sm;
+    @apply transition-colors ring-offset-2;
     @apply inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4;
     @apply dark:ring-offset-gray-900 ring-offset-gray-100;
     @apply focus:ring-2;
@@ -17,11 +17,16 @@
     @apply focus:ring-indigo-800;
 }
 
-.error {
+.error[type="button"] {
     @apply bg-red-800 text-white;
     @apply hover:bg-red-700;
     @apply focus:ring-red-700;
+}
 
+.error[type="reset"] {
+    @apply text-red-800;
+    @apply hover:text-red-700;
+    @apply focus:ring-0 ring-offset-0;
 }
 
 .info {

@@ -1,10 +1,18 @@
 import React, { Fragment, type FC } from "react";
 
+const APP_NAME = "Alessio Marchi";
+const APP_DESCRIPTION = "Alessio Marchi personal website";
+
 const Head: FC = () => {
   return (
     <Fragment>
       <title>Alessio Marchi | Home</title>
-      <meta name="description" content="Alessio Marchi personal website" />
+      <meta name="application-name" content={APP_NAME} />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content={APP_NAME} />
+      <meta name="description" content={APP_DESCRIPTION} />
+      <meta name="mobile-web-app-capable" content="yes" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />

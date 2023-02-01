@@ -1,4 +1,4 @@
-.button {
+.root {
     @apply transition-colors ring-offset-2 shadow-sm;
     @apply inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4;
     @apply dark:ring-offset-gray-900 ring-offset-gray-100;

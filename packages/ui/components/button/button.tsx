@@ -21,7 +21,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
     return (
         <button
             type={type}
-            className={clsx(styles['button'], styles[theme])}
+            className={clsx(styles['root'], styles[theme])}
             onClick={onClick}
         >
             {children}

@@ -7,6 +7,9 @@ const DefaultTags: FC = () => {
   return (
     <Fragment>
       <meta name="application-name" content={APP_NAME} />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="/icons/android-chrome-192x192.png" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content={APP_NAME} />

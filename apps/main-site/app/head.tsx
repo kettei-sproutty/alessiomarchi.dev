@@ -1,15 +1,16 @@
-import React, { Fragment, type FC } from 'react'
+import React, { Fragment, type FC } from "react";
 
 const Head: FC = () => {
   return (
     <Fragment>
-      <title>Next.js App Directory Playground</title>
-      <meta
-        name="description"
-        content="A playground to explore new Next.js 13 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching."
-      />
+      <title>Alessio Marchi | Home</title>
+      <meta name="description" content="Alessio Marchi personal website" />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     </Fragment>
   );
-}
+};
 
-export default Head
+export default Head;

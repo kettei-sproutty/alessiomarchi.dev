@@ -34,3 +34,19 @@ button.info {
     @apply hover:bg-success;
     @apply focus:ring-success;
 }
+
+button.small {
+    @apply h-10 max-w-[144px];
+}
+
+button.medium {
+    @apply h-14 max-w-[144px];
+}
+
+button.large {
+    @apply h-16 max-w-[144px];
+}
+
+button.full {
+    @apply w-full;
+}

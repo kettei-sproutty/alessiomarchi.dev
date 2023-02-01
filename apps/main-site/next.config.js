@@ -1,6 +1,6 @@
-const withPWA = require("next-pwa")({
-  disable: process.env.NODE_ENV === "development",
-  dest: "public",
+const withPWA = require("@ducanh2912/next-pwa").default({
+    disable: process.env.NODE_ENV === "development",
+    dest: "public",
 });
 
 /** @type {import('next').NextConfig} */

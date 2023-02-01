@@ -43,3 +43,7 @@ yarn-error.log*
 # Playwright
 packages/playwright/.cache/
 packages/playwright/test-results/
+
+# PWA
+**/public/workbox-*.js
+**/public/sw.js

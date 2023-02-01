@@ -5,6 +5,7 @@ const Head: FC = () => {
   return (
     <Fragment>
       <title>Design | Alessio Marchi</title>
+      <meta property="og:title" content="Design | Alessio Marchi " />
       <DefaultTags />
     </Fragment>
   );

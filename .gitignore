@@ -46,4 +46,4 @@ packages/playwright/test-results/
 
 # PWA
 **/public/workbox-*.js
-**/public/sw.js
+# **/public/sw.js

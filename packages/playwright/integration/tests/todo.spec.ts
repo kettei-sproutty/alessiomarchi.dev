@@ -52,10 +52,7 @@ test.describe('Todo Page', () => {
     await addSecondTodo()
   })
 
-  test('should clear the input field when a new item is added', async ({
-    page,
-    mockApi,
-  }) => {
+  test('should clear the input field when a new item is added', async ({ page, mockApi }) => {
     const { todos } = todosBody
     const todoPage = new TodoPage(page)
     const [waitForResponse] = await mockApi.todos.todo.get({ body: { todos } })
@@ -65,10 +62,7 @@ test.describe('Todo Page', () => {
     await expect(todoPage.getTodos()).toHaveCount(todos.length)
   })
 
-  test('should be able to mark todo items as complete', async ({
-    page,
-    mockApi,
-  }) => {
+  test('should be able to mark todo items as complete', async ({ page, mockApi }) => {
     const { todos } = todosBody
     const todoPage = new TodoPage(page)
     const todo = todos[0]
@@ -93,10 +87,7 @@ test.describe('Todo Page', () => {
     await expect(undoButton).toBeVisible()
   })
 
-  test('should be able to un-mark todo items as complete', async ({
-    page,
-    mockApi,
-  }) => {
+  test('should be able to un-mark todo items as complete', async ({ page, mockApi }) => {
     const { todos } = todosBody
     const todoPage = new TodoPage(page)
     const todo = { ...todos[0], done: true }

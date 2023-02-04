@@ -1,4 +1,4 @@
 .link {
-    @apply text-white;
-    @apply hover:text-gray-200;
+  @apply text-white;
+  @apply hover:text-gray-200;
 }

@@ -3,7 +3,7 @@ import { getAuthState } from 'shared/utils/storage-state'
 
 // TODO: This type isn't currently exported, the Playwright team are open to
 // contributions here.
-type Fixtures = Parameters<typeof test['use']>[0]
+type Fixtures = Parameters<(typeof test)['use']>[0]
 
 /**
  * An authenticated context for a spec.

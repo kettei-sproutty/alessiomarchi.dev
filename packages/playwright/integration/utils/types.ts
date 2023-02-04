@@ -59,9 +59,7 @@ export type CreateMockFn = <T>(serviceConfig: ServiceConfig<T>) => (
      * Returns an instance of `page.waitForResponse` which returns
      * a `Response` that matches the mock.
      */
-    waitForResponse: (
-      matcher?: (response: Response) => boolean
-    ) => Promise<Response>,
+    waitForResponse: (matcher?: (response: Response) => boolean) => Promise<Response>,
     /**
      * Returns the response body that was used by the API mock.
      */

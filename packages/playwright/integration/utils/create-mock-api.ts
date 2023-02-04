@@ -53,10 +53,7 @@ const createApiMockFn =
         const isRegex = value instanceof RegExp
         const isString = typeof value === 'string'
 
-        return [
-          key,
-          isRegex || isString ? { value, optional: false } : value,
-        ] as const
+        return [key, isRegex || isString ? { value, optional: false } : value] as const
       })
     )
 
@@ -72,15 +69,11 @@ const createApiMockFn =
 
         // If the HTTP method or the search params didn't match, continue
         // to the next handler.
-        if (
-          request.method() !== method ||
-          !hasMatchingParams(mockSearchParams, url.searchParams)
-        ) {
+        if (request.method() !== method || !hasMatchingParams(mockSearchParams, url.searchParams)) {
           return route.fallback()
         }
 
-        responseBody =
-          body instanceof Function ? body(defaultBody) : body ?? defaultBody
+        responseBody = body instanceof Function ? body(defaultBody) : body ?? defaultBody
 
         return route.fulfill({
           contentType: 'application/json',
@@ -92,8 +85,8 @@ const createApiMockFn =
     )
 
     return [
-      (matcher) =>
-        page.waitForResponse((response) => {
+      matcher =>
+        page.waitForResponse(response => {
           const url = new URL(response.url())
 
           if (

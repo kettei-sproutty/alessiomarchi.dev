@@ -2,11 +2,7 @@ import { test, expect } from 'e2e/setup-fixture'
 import { authenticatedContext } from 'e2e/utils/authenticated-context'
 import { TodoPage } from 'shared/pages/todo-page'
 
-const todos = [
-  'Make a cup of tea',
-  'Go out and exercise',
-  'Continue writing my next blog post',
-]
+const todos = ['Make a cup of tea', 'Go out and exercise', 'Continue writing my next blog post']
 
 // Add the user cookie to the browser context. The todos page
 // is behind authentication.
@@ -41,9 +37,7 @@ test.describe('Todo Page', () => {
     await addSecondTodo()
   })
 
-  test('should be able to mark and un-mark todo items as complete', async ({
-    page,
-  }) => {
+  test('should be able to mark and un-mark todo items as complete', async ({ page }) => {
     const todoPage = new TodoPage(page)
     await todoPage.goto()
 

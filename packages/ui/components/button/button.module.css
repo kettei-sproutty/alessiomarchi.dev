@@ -1,52 +1,52 @@
 button.root {
-    @apply transition-colors ring-offset-2;
-    @apply inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4;
-    @apply dark:ring-offset-gray-900 ring-offset-gray-100;
-    @apply focus:ring-2;
+  @apply transition-colors ring-offset-2;
+  @apply inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4;
+  @apply dark:ring-offset-gray-900 ring-offset-gray-100;
+  @apply focus:ring-2;
 }
 
 button.primary {
-    @apply bg-slate-800 text-white ;
-    @apply hover:bg-slate-700 hover:bg-opacity-100;
-    @apply focus:ring-slate-700;
+  @apply bg-slate-800 text-white;
+  @apply hover:bg-slate-700 hover:bg-opacity-100;
+  @apply focus:ring-slate-700;
 }
 
 button.secondary {
-    @apply bg-indigo-900 text-white ;
-    @apply hover:bg-indigo-800;
-    @apply focus:ring-indigo-800;
+  @apply bg-indigo-900 text-white;
+  @apply hover:bg-indigo-800;
+  @apply focus:ring-indigo-800;
 }
 
-button.error[type="button"] {
-    @apply bg-red-800 text-white;
-    @apply hover:bg-red-700;
-    @apply focus:ring-red-700;
+button.error[type='button'] {
+  @apply bg-red-800 text-white;
+  @apply hover:bg-red-700;
+  @apply focus:ring-red-700;
 }
 
-button.error[type="reset"] {
-    @apply text-red-800;
-    @apply hover:text-red-700;
-    @apply focus:ring-0 ring-offset-0;
+button.error[type='reset'] {
+  @apply text-red-800;
+  @apply hover:text-red-700;
+  @apply focus:ring-0 ring-offset-0;
 }
 
 button.info {
-    @apply bg-success-dark;
-    @apply hover:bg-success;
-    @apply focus:ring-success;
+  @apply bg-success-dark;
+  @apply hover:bg-success;
+  @apply focus:ring-success;
 }
 
 button.small {
-    @apply h-10 max-w-[144px];
+  @apply h-10 max-w-[144px];
 }
 
 button.medium {
-    @apply h-14 max-w-[144px];
+  @apply h-14 max-w-[144px];
 }
 
 button.large {
-    @apply h-16 max-w-[144px];
+  @apply h-16 max-w-[144px];
 }
 
 button.full {
-    @apply w-full;
+  @apply w-full;
 }

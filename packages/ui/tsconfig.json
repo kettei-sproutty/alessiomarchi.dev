@@ -1,7 +1,11 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": "@alessiomarchi/configs/tsconfig/nextjs.json",
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules", "playwright"]
-  }
-  
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@alessiomarchi/configs/tsconfig/nextjs.json",
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../../apps/main-site/components/navbar/navbar-link.tsx"
+  ],
+  "exclude": ["node_modules", "playwright"]
+}

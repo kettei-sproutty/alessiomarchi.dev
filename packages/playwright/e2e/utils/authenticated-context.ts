@@ -5,11 +5,9 @@ import type { StorageState } from 'shared/utils/storage-state'
 
 // TODO: This type isn't currently exported, the Playwright team are open to
 // contributions here.
-type Fixtures = Parameters<typeof test['use']>[0]
+type Fixtures = Parameters<(typeof test)['use']>[0]
 
-async function createAuthenticatedStorage(
-  baseURL: string
-): Promise<StorageState> {
+async function createAuthenticatedStorage(baseURL: string): Promise<StorageState> {
   const requestContext = await request.newContext()
   const token = 'SECRET_TOKEN'
 
@@ -31,7 +29,7 @@ async function createAuthenticatedStorage(
     // If here's an error try to get the error message from the JSON response.
     const errorMessage = await response
       .json()
-      .then((json) => {
+      .then(json => {
         // The API returns errors in the format `{ error: { message: string } }`.
         const { message } = json.error
         // if the body doesn't match our format, use the status text.

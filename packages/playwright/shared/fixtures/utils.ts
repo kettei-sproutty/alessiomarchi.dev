@@ -6,8 +6,7 @@ export const createUtils = (page: Page) => ({
    * Returns a locator that matches the given data-testid.
    * @param args - The data-testid to match.
    */
-  getByTestId: (...args: string[]) =>
-    page.locator(`data-testid=${tid(...args)}`),
+  getByTestId: (...args: string[]) => page.locator(`data-testid=${tid(...args)}`),
   getByTestIdWithinElement: (element: Locator, ...args: string[]) =>
     element.locator(`data-testid=${tid(...args)}`),
   /**

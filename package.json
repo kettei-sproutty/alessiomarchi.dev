@@ -5,12 +5,14 @@
     "apps/*",
     "packages/*"
   ],
+  "prettier": "./packages/configs/prettier-config/prettier.config.js",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "start": "turbo run start",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
+    "format": "prettier --ignore-path ./packages/configs/prettier-config/.prettierignore --write .",
     "test-server": "turbo run build && turbo run start",
     "test-unit": "turbo run test-unit",
     "integration": "turbo run integration",
@@ -18,6 +20,7 @@
   },
   "devDependencies": {
     "eslint": "^8.28.0",
+    "prettier": "^2.8.3",
     "eslint-config-turbo": "latest",
     "turbo": "latest"
   },

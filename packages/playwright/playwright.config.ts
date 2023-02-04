@@ -1,8 +1,5 @@
 import { join } from 'path'
-import type {
-  PlaywrightTestConfig,
-  ReporterDescription,
-} from '@playwright/test'
+import type { PlaywrightTestConfig, ReporterDescription } from '@playwright/test'
 import { devices } from '@playwright/test'
 import { BASE_URL, IS_CI, OPEN_DEVTOOLS, TEST_TYPE } from 'shared/constants'
 

@@ -2,16 +2,16 @@
 import React from "react";
 import clsx from "clsx";
 import NextLink from "next/link";
-import type { FC, PropsWithChildren } from "react";
 import { usePathname } from 'next/navigation'
+import type { FC, PropsWithChildren } from "react";
 
-import styles from "./link.module.css";
+import styles from "./navbar-link.module.css";
 
 export type LinkProps = {
   href: string;
 };
 
-const Link: FC<PropsWithChildren<LinkProps>> = ({ href, children }) => {
+const NavbarLink: FC<PropsWithChildren<LinkProps>> = ({ href, children }) => {
     const pathname = usePathname();
     
     const classes = clsx(styles["root"], {
@@ -25,4 +25,4 @@ const Link: FC<PropsWithChildren<LinkProps>> = ({ href, children }) => {
   );
 };
 
-export default Link;
+export default NavbarLink;

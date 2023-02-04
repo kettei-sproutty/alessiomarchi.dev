@@ -1,7 +1,0 @@
-a.root {
-    @apply transition-colors hover:bg-neutral-900 hover:text-white focus:bg-neutral-900 text-center px-2 py-1 delay-75 rounded-md;
-}
-
-a.active {
-    @apply bg-neutral-900 text-white;
-}

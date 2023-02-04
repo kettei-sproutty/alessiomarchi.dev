@@ -1,10 +1,7 @@
 import type { BrowserContextOptions } from '@playwright/test'
 import generateUsername from './generate-username'
 
-export type StorageState = Exclude<
-  BrowserContextOptions['storageState'],
-  string | undefined
->
+export type StorageState = Exclude<BrowserContextOptions['storageState'], string | undefined>
 
 export function getAuthState(baseURL: string): StorageState {
   const url = new URL(baseURL)

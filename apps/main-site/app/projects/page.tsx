@@ -1,15 +1,15 @@
-import React, { type FC } from "react";
+import React, { type FC } from 'react'
 
 export const metadata = {
   title: 'Projects',
-};
+}
 
 const ProjectPage: FC = () => {
   return (
     <div>
-      <h1 className="font-bold">Project Page</h1>
+      <h1 className='font-bold'>Project Page</h1>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectPage;
+export default ProjectPage

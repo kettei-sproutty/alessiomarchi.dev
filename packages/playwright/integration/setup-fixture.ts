@@ -10,9 +10,7 @@ type Extensions = { utils: Utils; mockApi: MockApi }
 export const test = base.extend<Extensions>({
   context: async ({ context, baseURL }, use) => {
     if (!baseURL) {
-      throw new Error(
-        '`baseURL` is required in order to run integration tests.'
-      )
+      throw new Error('`baseURL` is required in order to run integration tests.')
     }
 
     await context.route('**/*', (route, request) => {
@@ -29,9 +27,7 @@ export const test = base.extend<Extensions>({
       const isHeadRequest = request.method() === 'HEAD'
 
       // Allow requests to specific paths.
-      const isAllowed = ['/_next/'].some((allowedPath) =>
-        url.startsWith(`${baseURL}${allowedPath}`)
-      )
+      const isAllowed = ['/_next/'].some(allowedPath => url.startsWith(`${baseURL}${allowedPath}`))
 
       if (!isBlocked && (!isFetchRequest || isHeadRequest || isAllowed)) {
         return route.continue()

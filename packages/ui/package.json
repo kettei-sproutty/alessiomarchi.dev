@@ -1,33 +1,33 @@
 {
-    "name": "@alessiomarchi/ui",
-    "version": "0.0.0",
-    "license": "MIT",
-    "scripts": {
-      "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
-    },
-    "sideEffects": true,
-    "peerDependencies": {
-      "@vercel/analytics": "^0.1.8",
-      "next": "^13.1.6",
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0",
-      "tailwindcss": "^3.2.4"
-    },
-    "dependencies": {
-      "clsx": "^1.2.1",
-      "sugar-high": "^0.4.6"
-    },
-    "devDependencies": {
-      "@vercel/analytics": "^0.1.8",
-      "@types/react": "^18.0.27",
-      "@types/react-dom": "^18.0.10",
-      "@heroicons/react": "^2.0.14",
-      "next": "^13.1.6",
-      "react": "^18.2.0",
-      "tailwindcss": "^3.2.4",
-      "react-dom": "^18.2.0",
-      "eslint": "^8.33.0",
-      "@alessiomarchi/configs": "workspace:*",
-      "typescript": "^4.9.5"
-    }
+  "name": "@alessiomarchi/ui",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "sideEffects": true,
+  "peerDependencies": {
+    "@vercel/analytics": "^0.1.8",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "sugar-high": "^0.4.6"
+  },
+  "devDependencies": {
+    "@vercel/analytics": "^0.1.8",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@heroicons/react": "^2.0.14",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.2.4",
+    "react-dom": "^18.2.0",
+    "eslint": "^8.33.0",
+    "@alessiomarchi/configs": "workspace:*",
+    "typescript": "^4.9.5"
   }
+}

@@ -25,11 +25,7 @@ const args = arg(
   { permissive: true }
 )
 
-const testType = args['--integration']
-  ? 'integration'
-  : args['--e2e']
-  ? 'e2e'
-  : null
+const testType = args['--integration'] ? 'integration' : args['--e2e'] ? 'e2e' : null
 
 const pauseOnFailure = args['--pause-on-failure']
 
@@ -58,11 +54,10 @@ const initPlaywright = (options, ...paths) => {
 
   let closed = false
 
-  const instance = spawn(
-    'playwright',
-    [...testArgs, ...argsToForward, ...paths],
-    { stdio: 'inherit', env }
-  )
+  const instance = spawn('playwright', [...testArgs, ...argsToForward, ...paths], {
+    stdio: 'inherit',
+    env,
+  })
 
   if (options?.verbose !== false) {
     console.log('>', instance.spawnargs.join(' '))
@@ -84,7 +79,7 @@ const initPlaywright = (options, ...paths) => {
         reject(null)
       }
     })
-    instance.on('error', (error) => {
+    instance.on('error', error => {
       reject(error)
     })
   })
@@ -120,7 +115,7 @@ const watch = () =>
 
     function handlePath(path) {
       console.log('>', path)
-      initPlaywright({ verbose: false }, path).events.catch((error) => {
+      initPlaywright({ verbose: false }, path).events.catch(error => {
         console.error('An error happened using Playwright for:', path)
         console.error(error)
       })
@@ -133,7 +128,7 @@ const watch = () =>
   })
 
 if (args['--watch']) {
-  await watch().catch((error) => {
+  await watch().catch(error => {
     console.error(error)
     process.exit(1)
   })
@@ -143,7 +138,7 @@ if (args['--watch']) {
   process.on('exit', kill)
   process.on('SIGINT', kill)
 
-  await events.catch((error) => {
+  await events.catch(error => {
     if (error) {
       console.error('Playwright test suite failed with:')
       console.error(error)

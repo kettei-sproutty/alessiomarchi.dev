@@ -1,4 +1,4 @@
 .root {
-    @apply cursor-pointer flex justify-center w-full;
-    @apply rounded-md px-2 py-1 transition-colors;
+  @apply cursor-pointer flex justify-center w-full;
+  @apply rounded-md px-2 py-1 transition-colors;
 }

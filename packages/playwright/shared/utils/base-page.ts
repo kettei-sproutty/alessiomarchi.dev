@@ -13,10 +13,7 @@ export abstract class BasePage {
   }
 
   get mockApi() {
-    return (
-      this._mockApi ||
-      (this._mockApi = createApiMocks(createApiMockFn(this.page)))
-    )
+    return this._mockApi || (this._mockApi = createApiMocks(createApiMockFn(this.page)))
   }
 
   constructor(page: Page) {

@@ -5,9 +5,7 @@ import { TodoPage } from 'shared/pages/todo-page'
 import generateUsername from 'shared/utils/generate-username'
 
 test.describe('Signup', () => {
-  test('should allow a visitor to signup and redirect to todos page', async ({
-    page,
-  }) => {
+  test('should allow a visitor to signup and redirect to todos page', async ({ page }) => {
     const signupPage = new SignupPage(page)
     await signupPage.goto()
 
@@ -19,10 +17,7 @@ test.describe('Signup', () => {
     await password.click()
     await page.keyboard.type(randomUUID())
 
-    await Promise.all([
-      page.waitForNavigation({ url: '/' }),
-      submitButton.click(),
-    ])
+    await Promise.all([page.waitForNavigation({ url: '/' }), submitButton.click()])
 
     const todoPage = new TodoPage(page)
 

@@ -19,6 +19,7 @@
     "e2e": "turbo run e2e"
   },
   "devDependencies": {
+    "@types/node": "^18.11.18",
     "eslint": "^8.28.0",
     "eslint-config-turbo": "latest",
     "next": "^13.1.6",

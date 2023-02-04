@@ -1,5 +1,7 @@
 {
-  "name": "Alessio Marchi | Website",
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/web-manifest.json",
+  "name": "Website | Alessio Marchi",
+  "lang": "en",
   "short_name": "Alessio Marchi",
   "icons": [
     {
@@ -29,8 +31,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#171717",
+  "background_color": "#171717",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"

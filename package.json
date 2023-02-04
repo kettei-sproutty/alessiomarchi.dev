@@ -20,8 +20,9 @@
   },
   "devDependencies": {
     "eslint": "^8.28.0",
-    "prettier": "^2.8.3",
     "eslint-config-turbo": "latest",
+    "next": "^13.1.6",
+    "prettier": "^2.8.3",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.17.1"

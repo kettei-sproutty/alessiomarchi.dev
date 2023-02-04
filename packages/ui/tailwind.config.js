@@ -61,7 +61,6 @@ const colors = {
  * @type {import('tailwindcss/types/config').Config}
  */
 const tailwindConfig = {
-  darkMode: ['class', '[color-scheme:dark]'],
   theme: {
     extend: {
       fontFamily: {

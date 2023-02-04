@@ -17,6 +17,7 @@ importers:
       '@alessiomarchi/configs': workspace:*
       '@alessiomarchi/ui': workspace:*
       '@ducanh2912/next-pwa': ^7.3.3
+      '@heroicons/react': ^2.0.14
       '@types/jest': ^29.4.0
       '@types/node': ^17
       '@types/react': ^18.0.27
@@ -33,6 +34,7 @@ importers:
       typescript: ^4.9.5
     dependencies:
       '@ducanh2912/next-pwa': 7.3.3_next@13.1.6
+      '@heroicons/react': 2.0.14_react@18.2.0
       '@vercel/analytics': 0.1.8_react@18.2.0
       clsx: 1.2.1
       next: 13.1.6_biqbaboplfbrettd7655fr4n2y
@@ -95,6 +97,7 @@ importers:
   packages/ui:
     specifiers:
       '@alessiomarchi/configs': workspace:*
+      '@heroicons/react': ^2.0.14
       '@types/react': ^18.0.27
       '@types/react-dom': ^18.0.10
       '@vercel/analytics': ^0.1.8
@@ -111,6 +114,7 @@ importers:
       sugar-high: 0.4.6
     devDependencies:
       '@alessiomarchi/configs': link:../configs
+      '@heroicons/react': 2.0.14_react@18.2.0
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       '@vercel/analytics': 0.1.8_react@18.2.0
@@ -1405,6 +1409,13 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@heroicons/react/2.0.14_react@18.2.0:
+    resolution: {integrity: sha512-eFL4if6L7woL1fUvk/jjXx4z9NxVESHHrQnEd2qKVelTFTIr/3VLGWdPb0biia9ZVe26P0JSs/xmOlRNur3SrQ==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
 
   /@humanwhocodes/config-array/0.11.7:
     resolution: {integrity: sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw==}

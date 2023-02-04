@@ -1,6 +1,7 @@
 "use client";
-import { Button } from "@alessiomarchi/ui/components";
 import React, { type FC } from "react";
+import styles from "./change-theme.module.css";
+import { SunIcon } from '@heroicons/react/24/solid'
 
 const ChangeTheme: FC = () => {
   const setThemeCookie = (oldTheme: string, newTheme: string) => {
@@ -49,9 +50,9 @@ const ChangeTheme: FC = () => {
   }, []);
 
   return (
-    <Button ariaLabel="Change Theme" onClick={handleThemeChange}>
-      Change Theme
-    </Button>
+    <div className={styles.root} aria-label="Change Theme" onClick={handleThemeChange}>
+      <SunIcon className="h-6 w-6" />
+    </div>
   );
 };
 

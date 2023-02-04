@@ -1,0 +1,4 @@
+.root {
+    @apply cursor-pointer flex justify-center;
+    @apply focus:bg-neutral-900 hover:bg-neutral-900 hover:text-white rounded-md px-2 py-1 transition-colors;
+}

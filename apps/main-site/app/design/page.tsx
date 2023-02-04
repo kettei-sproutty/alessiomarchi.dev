@@ -1,6 +1,10 @@
 import React, { type FC } from "react";
 import { Button } from "@alessiomarchi/ui/components";
 
+export const metadata = {
+  title: 'Design',
+};
+
 const DesignPage: FC = () => {
   return (
     <div className="space-y-2">

@@ -1,5 +1,9 @@
 import React, { type FC } from "react";
 
+export const metadata = {
+  title: 'Projects',
+};
+
 const ProjectPage: FC = () => {
   return (
     <div>

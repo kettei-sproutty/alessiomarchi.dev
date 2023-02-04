@@ -1,5 +1,9 @@
 import React, { type FC } from "react";
 
+export const metadata = {
+  title: 'About me',
+};
+
 const AboutPage: FC = () => {
   return (
     <div>

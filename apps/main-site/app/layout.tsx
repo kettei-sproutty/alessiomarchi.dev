@@ -1,10 +1,13 @@
 import React, { type FC, type PropsWithChildren } from "react";
+import clsx from "clsx";
+import Navbar from "../components/navbar/navbar";
 import { cookies } from 'next/headers'
 import { AnalyticsWrapper } from '@alessiomarchi/ui/components'
-import Navbar from "../components/navbar/navbar";
-import clsx from "clsx";
+import globalMetadata from "./metadata";
 
 import "@alessiomarchi/ui/styles/globals.css";
+
+export const metadata = globalMetadata;
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   const themeCookie = cookies().get('theme')

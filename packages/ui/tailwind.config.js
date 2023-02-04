@@ -57,7 +57,10 @@ const colors = {
   background: "#fff",
 };
 
-module.exports = {
+/**
+ * @type {import('tailwindcss/types/config').Config}
+ */
+const tailwindConfig = {
   theme: {
     extend: {
       fontFamily: {
@@ -95,3 +98,5 @@ module.exports = {
     },
   },
 };
+
+module.exports = tailwindConfig

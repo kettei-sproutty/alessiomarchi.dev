@@ -1,17 +1,21 @@
 <!doctype html>
-<html class="bg-background min-h-dvh" lang="en">
+<html class="bg-background min-h-dvh overscroll-none" lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#7c35f1" />
+        <meta
+            name="theme-color"
+            content="oklch(0.9843 0.0017 247.8393)"
+            media="(prefers-color-scheme: light)"
+        />
+        <meta
+            name="theme-color"
+            content="oklch(0.2357 0.0075 248.1444)"
+            media="(prefers-color-scheme: dark)"
+        />
 
-        <!-- Preload critical assets -->
         <link rel="preload" href="/logo.svg" as="image" type="image/svg+xml" />
-
-        <!-- PWA Manifest -->
         <link rel="manifest" href="/manifest.json" />
-
-        <!-- Apple Touch Icon -->
         <link rel="apple-touch-icon" href="/icons/favicon-180x180.png" />
 
         %sveltekit.head%

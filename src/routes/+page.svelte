@@ -4,35 +4,10 @@
     import GitHub from "$lib/icons/GitHub.svelte";
     import LinkedIn from "$lib/icons/LinkedIn.svelte";
 
-    const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "Alessio Marchi",
-        url: "https://alessiomarchi.dev",
-        description:
-            "Personal website of Alessio Marchi - Software Engineer and Developer",
-        author: {
-            "@type": "Person",
-            name: "Alessio Marchi",
-            url: "https://alessiomarchi.dev",
-            sameAs: [
-                "https://twitter.com/alessiom97",
-                "https://github.com/kettei-sproutty",
-                "https://linkedin.com/in/alessiomarchi",
-            ],
-        },
-        inLanguage: "en",
-    };
-
-    let mounted = $state(false);
     let mouseX = $state(0);
     let mouseY = $state(0);
 
     onMount(() => {
-        requestAnimationFrame(() => {
-            mounted = true;
-        });
-
         const handleMouseMove = (e: MouseEvent) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
@@ -48,130 +23,88 @@
     });
 </script>
 
-<svelte:head>
-    <title>Coming Soon | Alessio Marchi</title>
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta
-        name="description"
-        content="Alessio Marchi's personal website - Coming Soon. Software Engineer and Developer."
-    />
-    <meta property="og:title" content="Coming Soon | Alessio Marchi" />
-    <meta
-        property="og:description"
-        content="Alessio Marchi's personal website - Coming Soon. Software Engineer and Developer."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://alessiomarchi.dev" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@alessiom97" />
-    <meta name="twitter:title" content="Coming Soon | Alessio Marchi" />
-    <meta
-        name="twitter:description"
-        content="Alessio Marchi's personal website - Coming Soon. Software Engineer and Developer."
-    />
+<div class="gradient-bg absolute inset-0 opacity-[0.03]"></div>
 
-    {@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
-</svelte:head>
+<div
+    class="orb absolute left-[10%] top-[10%] size-[400px] rounded-full bg-primary opacity-15 blur-[60px]"
+></div>
+<div
+    class="orb absolute right-[10%] top-[60%] size-[300px] rounded-full bg-chart-2 opacity-15 blur-[60px]"
+    style="animation-delay: -7s"
+></div>
+<div
+    class="orb absolute bottom-[10%] left-[30%] size-[350px] rounded-full bg-chart-3 opacity-15 blur-[60px]"
+    style="animation-delay: -14s"
+></div>
 
-<div class="relative min-h-screen w-full overflow-hidden bg-background">
-    <div class="gradient-bg absolute inset-0 opacity-[0.03]"></div>
+<div
+    class="pointer-events-none fixed z-10 size-96 rounded-full opacity-20 blur-3xl"
+    style="background: radial-gradient(circle, var(--primary) 0%, transparent 70%); transform: translate3d({mouseX -
+        192}px, {mouseY - 192}px, 0); transition: transform 0.3s ease-out;"
+></div>
 
-    <div
-        class="orb absolute left-[10%] top-[10%] size-[400px] rounded-full bg-primary opacity-15 blur-[60px]"
-    ></div>
-    <div
-        class="orb absolute right-[10%] top-[60%] size-[300px] rounded-full bg-chart-2 opacity-15 blur-[60px]"
-        style="animation-delay: -7s"
-    ></div>
-    <div
-        class="orb absolute bottom-[10%] left-[30%] size-[350px] rounded-full bg-chart-3 opacity-15 blur-[60px]"
-        style="animation-delay: -14s"
-    ></div>
-
-    {#if mounted}
-        <div
-            class="pointer-events-none fixed z-10 size-96 rounded-full opacity-20 blur-3xl"
-            style="background: radial-gradient(circle, var(--primary) 0%, transparent 70%); transform: translate3d({mouseX -
-                192}px, {mouseY -
-                192}px, 0); transition: transform 0.3s ease-out;"
-        ></div>
-    {/if}
-
-    <main
-        class="relative z-20 flex min-h-screen flex-col items-center justify-center px-6"
-    >
-        <div class="max-w-4xl text-center">
-            <div
-                class="mx-auto mb-12 w-64 md:w-80"
-                class:fade-in-scale={mounted}
-                style="animation-delay: 0.1s"
-            >
-                <div class="logo-container">
-                    <img
-                        src="/logo.svg"
-                        alt="Alessio Marchi Logo"
-                        class="h-auto w-full select-none"
-                        width="320"
-                        height="320"
-                        loading="eager"
-                        decoding="async"
-                    />
-                </div>
-            </div>
-            <h1 class="sr-only">Alessio Marchi</h1>
-            <h2
-                class="mb-8 flex flex-col space-y-4 text-7xl font-bold tracking-tight text-foreground md:text-9xl"
-            >
-                <span
-                    class="gradient-text"
-                    class:fade-in-up={mounted}
-                    style="animation-delay: 0.3s">Coming</span
-                >
-                <span
-                    class="gradient-text"
-                    class:fade-in-up={mounted}
-                    style="animation-delay: 0.5s">Soon</span
-                >
-            </h2>
-
-            <div
-                class="flex justify-center gap-6"
-                class:fade-in-up={mounted}
-                style="animation-delay: 0.7s"
-            >
-                <a
-                    href="https://x.com/alessiom97"
-                    class="social-link flex size-12 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all duration-300"
-                    aria-label="Twitter"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <Twitter />
-                </a>
-                <a
-                    href="https://github.com/kettei-sproutty/"
-                    class="social-link flex size-12 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all duration-300"
-                    aria-label="GitHub"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <GitHub />
-                </a>
-                <a
-                    href="https://linkedin.com/in/alessiomarchi"
-                    class="social-link flex size-12 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all duration-300"
-                    aria-label="LinkedIn"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <LinkedIn />
-                </a>
+<section
+    class="relative z-20 flex min-h-screen flex-col items-center justify-center px-6"
+>
+    <div class="max-w-4xl text-center">
+        <div class="mx-auto mb-12 w-64 md:w-80">
+            <div class="logo-container">
+                <img
+                    src="/logo.svg"
+                    alt="Alessio Marchi Logo"
+                    class="h-auto w-full select-none"
+                    width="320"
+                    height="320"
+                    loading="eager"
+                    decoding="async"
+                />
             </div>
         </div>
-    </main>
-</div>
+        <h1 class="sr-only">Alessio Marchi</h1>
+        <h2
+            class="mb-8 flex flex-col space-y-4 text-7xl font-bold tracking-tight text-foreground md:text-9xl"
+        >
+            <span class="fade-in-up gradient-text" style="animation-delay: 0.2s"
+                >Coming</span
+            >
+            <span class="fade-in-up gradient-text" style="animation-delay: 0.4s"
+                >Soon</span
+            >
+        </h2>
 
-<style>
+        <div class="fade-in-up flex justify-center gap-6">
+            <a
+                href="https://x.com/alessiom97"
+                class="social-link flex size-12 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all duration-300"
+                aria-label="Twitter"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <Twitter />
+            </a>
+            <a
+                href="https://github.com/kettei-sproutty/"
+                class="social-link flex size-12 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all duration-300"
+                aria-label="GitHub"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <GitHub />
+            </a>
+            <a
+                href="https://linkedin.com/in/alessiomarchi"
+                class="social-link flex size-12 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all duration-300"
+                aria-label="LinkedIn"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <LinkedIn />
+            </a>
+        </div>
+    </div>
+</section>
+
+<style scoped>
     .gradient-bg {
         background: linear-gradient(
             125deg,
@@ -252,7 +185,7 @@
     }
 
     .fade-in-up {
-        animation: fadeInUp 0.6s ease-out forwards;
+        animation: fadeInUp 0.6s ease-out both;
         opacity: 0;
         transform: translateY(20px);
     }
@@ -265,7 +198,7 @@
     }
 
     .fade-in-scale {
-        animation: fadeInScale 0.8s ease-out forwards;
+        animation: fadeInScale 0.8s ease-out both;
         opacity: 0;
         transform: scale(0.9);
     }

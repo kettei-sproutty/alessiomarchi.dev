@@ -57,6 +57,7 @@
                     height="320"
                     loading="eager"
                     decoding="async"
+                    fetchpriority="high"
                 />
             </div>
         </div>
@@ -64,15 +65,20 @@
         <h2
             class="mb-8 flex flex-col space-y-4 text-7xl font-bold tracking-tight text-foreground md:text-9xl"
         >
-            <span class="fade-in-up gradient-text" style="animation-delay: 0.2s"
-                >Coming</span
+            <span
+                class="slide-in-up gradient-text"
+                style="animation-delay: 0.2s">Coming</span
             >
-            <span class="fade-in-up gradient-text" style="animation-delay: 0.4s"
-                >Soon</span
+            <span
+                class="slide-in-up gradient-text"
+                style="animation-delay: 0.4s">Soon</span
             >
         </h2>
 
-        <div class="fade-in-up flex justify-center gap-6">
+        <div
+            class="fade-in-scale flex justify-center gap-6"
+            style="animation-delay: 0.6s"
+        >
             <a
                 href="https://x.com/alessiom97"
                 class="social-link flex size-12 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all duration-300"
@@ -184,15 +190,15 @@
         }
     }
 
-    .fade-in-up {
-        animation: fadeInUp 0.6s ease-out both;
-        opacity: 0;
-        transform: translateY(20px);
+    .slide-in-up {
+        animation: slideInUp 0.6s ease-out both;
     }
 
-    @keyframes fadeInUp {
+    @keyframes slideInUp {
+        from {
+            transform: translateY(20px);
+        }
         to {
-            opacity: 1;
             transform: translateY(0);
         }
     }
@@ -239,7 +245,7 @@
             animation: none;
         }
 
-        .fade-in-up,
+        .slide-in-up,
         .fade-in-scale {
             animation: none;
             opacity: 1;

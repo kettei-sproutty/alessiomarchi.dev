@@ -1,0 +1,10 @@
+node_modules
+.svelte-kit
+build
+.git
+.gitignore
+*.md
+.vscode
+.env*
+.DS_Store
+Thumbs.db

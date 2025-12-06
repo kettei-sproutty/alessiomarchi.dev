@@ -49,6 +49,6 @@
     {@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
 </svelte:head>
 
-<main>
+<main class="relative h-full w-full overflow-hidden">
     {@render children()}
 </main>

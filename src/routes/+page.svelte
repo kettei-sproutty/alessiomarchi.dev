@@ -74,10 +74,8 @@
 </svelte:head>
 
 <div class="relative min-h-screen w-full overflow-hidden bg-background">
-    <!-- Animated gradient background -->
     <div class="gradient-bg absolute inset-0 opacity-[0.03]"></div>
 
-    <!-- Floating orbs -->
     <div
         class="orb absolute left-[10%] top-[10%] size-[400px] rounded-full bg-primary opacity-15 blur-[60px]"
     ></div>
@@ -90,7 +88,6 @@
         style="animation-delay: -14s"
     ></div>
 
-    <!-- Mouse follower glow -->
     {#if mounted}
         <div
             class="pointer-events-none fixed z-10 size-96 rounded-full opacity-20 blur-3xl"
@@ -121,23 +118,21 @@
                     />
                 </div>
             </div>
-
-            <div class="mb-8 space-y-4">
-                <h1
-                    class="text-7xl font-bold tracking-tight text-foreground md:text-9xl"
+            <h1 class="sr-only">Alessio Marchi</h1>
+            <h2
+                class="mb-8 flex flex-col space-y-4 text-7xl font-bold tracking-tight text-foreground md:text-9xl"
+            >
+                <span
+                    class="gradient-text"
                     class:fade-in-up={mounted}
-                    style="animation-delay: 0.3s"
+                    style="animation-delay: 0.3s">Coming</span
                 >
-                    <span class="gradient-text">Coming</span>
-                </h1>
-                <h1
-                    class="text-7xl font-bold tracking-tight text-foreground md:text-9xl"
+                <span
+                    class="gradient-text"
                     class:fade-in-up={mounted}
-                    style="animation-delay: 0.5s"
+                    style="animation-delay: 0.5s">Soon</span
                 >
-                    <span class="gradient-text">Soon</span>
-                </h1>
-            </div>
+            </h2>
 
             <div
                 class="flex justify-center gap-6"
@@ -177,7 +172,6 @@
 </div>
 
 <style>
-    /* Gradient background - only animation and gradient needed */
     .gradient-bg {
         background: linear-gradient(
             125deg,
@@ -201,7 +195,6 @@
         }
     }
 
-    /* Orbs - only animation needed */
     .orb {
         animation: float 20s ease-in-out infinite;
     }
@@ -219,7 +212,6 @@
         }
     }
 
-    /* Logo floating animation */
     .logo-container {
         animation: logo-float 6s ease-in-out infinite;
         filter: drop-shadow(0 10px 30px rgba(124, 53, 241, 0.3));
@@ -235,7 +227,6 @@
         }
     }
 
-    /* Gradient text - requires custom for animated gradient */
     .gradient-text {
         background: linear-gradient(
             135deg,
@@ -260,7 +251,6 @@
         }
     }
 
-    /* Fade animations */
     .fade-in-up {
         animation: fadeInUp 0.6s ease-out forwards;
         opacity: 0;
@@ -287,7 +277,6 @@
         }
     }
 
-    /* Social link hover/focus - only interactive states need custom */
     .social-link:hover {
         background: var(--primary);
         color: var(--primary-foreground);
@@ -301,7 +290,6 @@
         outline-offset: 2px;
     }
 
-    /* Responsive orbs */
     @media (max-width: 640px) {
         .orb {
             filter: blur(40px);
@@ -310,7 +298,6 @@
         }
     }
 
-    /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
         .gradient-bg,
         .orb,

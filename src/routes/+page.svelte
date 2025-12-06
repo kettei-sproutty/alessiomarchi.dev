@@ -44,7 +44,7 @@
 ></div>
 
 <section
-    class="relative z-20 flex min-h-screen flex-col items-center justify-center px-6"
+    class="relative z-20 flex h-full flex-col items-center justify-center px-6"
 >
     <div class="max-w-4xl text-center">
         <div class="mx-auto mb-12 w-64 md:w-80">

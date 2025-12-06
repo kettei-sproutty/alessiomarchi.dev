@@ -12,9 +12,6 @@ const config = {
       precompress: true,
       strict: true,
     }),
-    prerender: {
-      entries: ["*"],
-    },
   },
 };
 
